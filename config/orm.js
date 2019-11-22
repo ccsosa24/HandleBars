@@ -1,7 +1,7 @@
 var connection = require("./connection");
 
 var orm = {
-    selectAll: function(callback){
+    selectAll: function(burgers, callback){
          connection.query('SELECT * FROM burgers', function(err, results){
             if (err){
             throw err;

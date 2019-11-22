@@ -1,40 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-   
+
+
 </head>
+
 <body>
 
-    <video autoplay muted loop id="myVideo"
-    <source scr="https://media.giphy.com/media/xUPGcHNYJTSP4uCUpy/giphy.gif" type="video/gif">
-</video>
+    <video autoplay muted loop id="myVideo" <source scr="https://media.giphy.com/media/xUPGcHNYJTSP4uCUpy/giphy.gif"
+        type="video/gif">
+    </video>
 
-    <nav class="navbar justify-content-between">
-        <a class="navbar-brand">
+    <nav class="nav justify-content-center">
+        <a class="nav-brand">
             <h1>Chomp Chomp Burgers</h1>
         </a>
     </nav>
-    
-<div class="container" id="main">
-    <div class="row justify-content-center">
-        <div class="col-m-3 mt-4 mr-3">
+
+    <div class="container" id="main">
+
+        <div class="row">
+            <div class="col"></div>
+        </div>
+
+        <div class="row text-center add">
+            <div class="col-6">
+                <div class="input text-center">
+                    <div class="form-group">
+                        <h2>Create Your Masterpiece</h2>
+                        <form method="POST" action="api/burgers" class="text-center">
+                            <textara id="create" type="text" name="burger_name" rows="2" cols="50"></textara>
+                            <button type="submit" class="btn btn-outline-black" id="makeit">Make It So..</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
 
         </div>
+
+        <div class="col"></div>
+
+        <div class="row text-center add">
+            <div class="col">
+                <h2>Da Burger Has Arrived</h2>
+                <ul>
+                    {{#each burgers}} {{#if this.devoured}}
+                    <li>
+                        <p class="typeABurger">{{this.burger_name}}</p>
+                        <form action="api/burgers/{{this.id}}?_method=PUT" method="POST">
+                        <input type="hidden" name="eaten" value="true">
+                        <button class="btn btn-outline-black" type="submit" id="eatit">Chomp Away</button>
+                        </form>
+                    </li>
+                    {{/if}} {{/each}}
+                </ul>
+            </div>
+        
+
+
+    <div class="col-5"></div>
+
+
+        <div class="col">
+            <div class="text center">
+             <h2>Burgers Smashed</h2>
+                <ul>
+                    {{#each burgers}} {{#if this.devoured}}
+                    <li>
+                        <p class="typeAburger">{{this.burger_name}}</p>
+                    </li>
+                    {{/if}} {{/each}}
+                </ul>
+        </div>
+
+
+
+
     </div>
 
 </div>
 
-
-
-
-
-
-
-
+</div>
 
 </body>
+
 </html>

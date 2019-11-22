@@ -6,20 +6,12 @@
     
 }   
 
-#main{
-   border-style: double;
-   border-width: 3px;
-   border-color: white;
-   min-height: 300px;
 
-    
-   
-}
 
 nav {
     background: transparent;
     border-bottom-style: double;
-    border-color: #ccc9c4;
+    height: 150px;
 }
 
 h1{
@@ -27,11 +19,34 @@ h1{
     font-family: 'Indie Flower', cursive;
 }
 
+#makeit {
+    display: block;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
 
+.eatit{
+    display: block;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin-bottom: 5px; 
+}
 
+.typeABurger{
+    font-size: 30px;
+    color: Red;
+    font-family: 'Shrikhand', cursive;
+    padding-top:15px;
+}
 
-
-
+#create{
+    color: blueviolet;
+}
 
 @media screen and (max-width: 500px) {
     div{width:70%;}

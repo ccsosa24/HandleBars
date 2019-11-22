@@ -7,7 +7,7 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 
-app.use(express.static('/public'));
+app.use(express.static("/public"));
 app.use('/', require('./controllers/burgers_controller'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
