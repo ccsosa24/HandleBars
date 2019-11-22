@@ -1,0 +1,38 @@
+#myVideo {
+    position: fixed;
+    background: url('https://media.giphy.com/media/xUPGcHNYJTSP4uCUpy/giphy.gif');
+    min-width: 100%;
+    min-height: 100%;
+    
+}   
+
+#main{
+   border-style: double;
+   border-width: 3px;
+   border-color: white;
+   min-height: 300px;
+
+    
+   
+}
+
+nav {
+    background: transparent;
+    border-bottom-style: double;
+    border-color: #ccc9c4;
+}
+
+h1{
+    color: whitesmoke;
+    font-family: 'Indie Flower', cursive;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    div{width:70%;}
+}
