@@ -34,48 +34,6 @@ router.post("/api/burgers/:id", function(req, resuts){
 
 
 
-// ajaxs 
-
-// $(function() {
-//     $(".create-form").on("submit", function(event) {
-//         event.preventDefault();
-
-//         var chomples = {
-//             burger_name: $("Chomples")
-//             .val()
-//             .trim(),
-//             devoured: 0
-//         };
-
-//         $.ajax("/api/burger", {
-//             type: "POST",
-//             data: chomples
-//         });
-//         then(function(){
-//             console.log("Add Your Burger");
-//         });
-//     });
-
-//         $(".eatDaburger").on("click", function(event){
-//             event.preventDefault();
-
-//             var id = $(this).data("id");
-//             var eatenBurger = {
-//                 devoured: 1
-//             };
-
-//             $.ajax("/api/burgers/" + id, {
-//                 type: "PUT",
-//                 data: eatenBurger
-//             })
-//             .then(function(){
-//                 console.log("Burger Chomped");
-//             });
-//         });
-
-// });
-
-
 
 
 
