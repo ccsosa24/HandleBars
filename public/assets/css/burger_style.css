@@ -6,46 +6,57 @@
     
 }   
 
+#main {
+    margin-top: 15%;
+}
 
-
-nav {
+.nav {
     background: transparent;
     border-bottom-style: double;
     height: 150px;
 }
 
 h1{
+
     color: whitesmoke;
     font-family: 'Indie Flower', cursive;
+}
+
+h2 {
+    color: whitesmoke;
 }
 
 #makeit {
     display: block;
     font-family: 'Permanent Marker', cursive;
     font-weight: bold;
-    border: 3px solid black;
+    border: 3px solid whitesmoke;
     border-radius: 5px;
     margin-bottom: 5px;
+    color:whitesmoke;
 }
 
-.eatit{
+
+#eatit{
     display: block;
     font-family: 'Permanent Marker', cursive;
     font-weight: bold;
-    border: 3px solid black;
+    border: 3px solid whitesmoke;
     border-radius: 5px;
     margin-bottom: 5px; 
+    color: whitesmoke;
 }
 
 .typeABurger{
     font-size: 30px;
-    color: Red;
+    color: whitesmoke;
     font-family: 'Shrikhand', cursive;
     padding-top:15px;
 }
 
 #create{
-    color: blueviolet;
+    color: whitesmoke;
+    outline: none;
 }
 
 @media screen and (max-width: 500px) {

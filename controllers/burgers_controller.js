@@ -4,6 +4,7 @@ var burger = require("../models/burger");
 var router = express.Router();
 
 router.get("/", function(req, results){
+
     burger.selectAll(function(data){
         var hbsObject = { burgers: data };
     
@@ -14,16 +15,18 @@ router.get("/", function(req, results){
 
     // create burger
     router.post("/api/burgers", function(req, results){
-        burger.insertOne(req.body.burger_name, req.body.devoured,
-            function(resutls) {
-                results.json({ id: resutls.insetId});
+        console.log("BELOW IS REQ BODY BGNAME")
+        console.log(req.body)
+        burger.insertOne(req.body.burger_name, function() {
+
+                results.json({ id: results.insetId});
             }
         );
     });
 
 // chomp chomp
-router.post("/api/burgers/:id", function(req, resuts){
-
+router.put("/api/burgers/:id", function(req, results){
+        console.log(results)
     burger.updateOne(req.params.id, function() {
         results.redirect("/");
     });
